@@ -1,4 +1,4 @@
-package com.chrm.mybatis.generator.plugins.annotation;
+package com.wonders.enums;
 
 /**
  * 开发公司：青岛海豚数据技术有限公司
@@ -10,9 +10,7 @@ package com.chrm.mybatis.generator.plugins.annotation;
  * @created Create Time: 2019/1/16
  */
 public enum Annotation {
-    DATA("@Data", "lombok.Data"),
     Mapper("@Mapper", "org.apache.ibatis.annotations.Mapper"),
-    Param("@Param", "org.apache.ibatis.annotations.Param"),
     ApiModel("@ApiModel", "io.swagger.annotations.ApiModel"),
     ApiModelProperty("@ApiModelProperty", "io.swagger.annotations.ApiModelProperty"),
     Length("@Length", "org.hibernate.validator.constraints.Length"),

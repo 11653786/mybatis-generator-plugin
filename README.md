@@ -59,7 +59,7 @@
 			<property name="suppressDate" value="true" />
 		</plugin>
 		<!-- 整合lombok-->
-		<plugin type="com.chrm.mybatis.generator.plugins.LombokPlugin" >
+		<plugin type="com.wonders.plugin.LombokPlugin" >
 			<property name="hasLombok" value="true"/>
 		</plugin>
 
