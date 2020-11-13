@@ -14,8 +14,8 @@ public enum Annotation {
     ApiModel("@ApiModel", "io.swagger.annotations.ApiModel"),
     ApiModelProperty("@ApiModelProperty", "io.swagger.annotations.ApiModelProperty"),
     Length("@Length", "org.hibernate.validator.constraints.Length"),
-    JsonFormat("@JsonFormat", "com.fasterxml.jackson.annotation.JsonFormat");
-
+    JsonFormat("@JsonFormat", "com.fasterxml.jackson.annotation.JsonFormat"),
+    EXCEL("@Excel", "com.wonders.his.common.annotation.Excel");
     private String annotation;
 
     private String clazz;

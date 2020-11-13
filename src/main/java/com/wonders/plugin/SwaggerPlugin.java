@@ -35,7 +35,7 @@ public class SwaggerPlugin extends PluginAdapter {
         Set<FullyQualifiedJavaType> set = new HashSet<FullyQualifiedJavaType>();
         set.add(new FullyQualifiedJavaType(Annotation.ApiModel.getClazz()));
         topLevelClass.addImportedTypes(set);
-        topLevelClass.addAnnotation(Annotation.ApiModel.getAnnotation() + "(value=\"" + topLevelClass.getType() + "\",description=\"" + introspectedTable.getRemarks() + "\")");
+        topLevelClass.addAnnotation(Annotation.ApiModel.getAnnotation() + "(\"" + introspectedTable.getFullyQualifiedTable().getDomainObjectName() + "\")");
         return super.modelBaseRecordClassGenerated(topLevelClass, introspectedTable);
     }
 
