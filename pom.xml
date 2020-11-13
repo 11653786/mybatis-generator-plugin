@@ -6,7 +6,7 @@
     <groupId>com.wonders</groupId>
     <artifactId>mybatis-generator-plugin</artifactId>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <name>mybatis-generator-plugin</name>
 
     <properties>
