@@ -1,34 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wonders</groupId>
     <artifactId>mybatis-generator-plugin</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>mybatis-generator-plugin</name>
 
     <properties>
-        <wonders.version>1.0.0</wonders.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
-        <shiro.version>1.6.0</shiro.version>
-        <thymeleaf.extras.shiro.version>2.0.0</thymeleaf.extras.shiro.version>
-        <druid.version>1.2.1</druid.version>
-        <bitwalker.version>1.19</bitwalker.version>
-        <kaptcha.version>2.3.2</kaptcha.version>
-        <swagger.version>2.9.2</swagger.version>
-        <pagehelper.boot.version>1.3.0</pagehelper.boot.version>
-        <fastjson.version>1.2.74</fastjson.version>
-        <oshi.version>5.2.5</oshi.version>
-        <jna.version>5.5.0</jna.version>
-        <commons.io.version>2.5</commons.io.version>
-        <commons.fileupload.version>1.3.3</commons.fileupload.version>
-        <poi.version>3.17</poi.version>
-        <velocity.version>1.7</velocity.version>
     </properties>
 
     <dependencies>
@@ -92,5 +75,4 @@
             <url>http://10.1.94.188:9917/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-
 </project>
