@@ -65,7 +65,7 @@ public class SwaggerPlugin extends PluginAdapter {
         }
         // 追加日期格式化注解
         if (introspectedColumn.getJdbcTypeName() == "TIMESTAMP") {
-            field.addAnnotation(Annotation.JsonFormat.getAnnotation() + "(pattern = \"yyyy-MM-dd\",timezone=\"GMT+8\")");
+            field.addAnnotation(Annotation.JsonFormat.getAnnotation() + "(pattern = \"yyyy-MM-dd HH:mm:ss\",timezone=\"GMT+8\")");
             topLevelClass.addImportedType(new FullyQualifiedJavaType(Annotation.JsonFormat.getClazz()));
         }
         // tinyint数据（Byte）转换成（Integer）类型

@@ -3,18 +3,18 @@ package com.wonders.plugin;
 import com.wonders.enums.Annotation;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.PluginAdapter;
-import org.mybatis.generator.api.dom.java.*;
+import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
+import org.mybatis.generator.api.dom.java.Interface;
+import org.mybatis.generator.api.dom.java.TopLevelClass;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 /**
- *
- *  @Author: GuiRunning 郭贵荣
- *
- *  @Description: 自定义注释生成
- *
- *  @Date: 2018/7/14 0:57
- *
+ * @Author: GuiRunning 郭贵荣
+ * @Description: 自定义注释生成
+ * @Date: 2018/7/14 0:57
  */
 public class MapperAnnotationPlugin extends PluginAdapter {
 
@@ -36,7 +36,7 @@ public class MapperAnnotationPlugin extends PluginAdapter {
         Set<FullyQualifiedJavaType> set = new HashSet<FullyQualifiedJavaType>();
         set.add(new FullyQualifiedJavaType(Annotation.Mapper.getClazz()));
         interfaze.addImportedTypes(set);
-        interfaze.addAnnotation(Annotation.Mapper.getAnnotation() + "()");
+        interfaze.addAnnotation(Annotation.Mapper.getAnnotation());
         return super.clientGenerated(interfaze, topLevelClass, introspectedTable);
     }
 }
