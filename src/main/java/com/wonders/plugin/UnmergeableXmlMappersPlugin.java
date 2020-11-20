@@ -9,12 +9,15 @@ import java.lang.reflect.Field;
 import java.util.List;
 
 /**
+ * 1.3.7已经修复了这个问题
  * 修复mybatis生成mapper.xml时会重复的问题
  *
  * @author DangerShi
  * @date 2020/5/7
  */
 public class UnmergeableXmlMappersPlugin extends PluginAdapter {
+
+    @Override
     public boolean validate(List<String> warnings) {
         return true;
     }
