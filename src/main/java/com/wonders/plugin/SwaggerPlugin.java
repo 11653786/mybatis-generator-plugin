@@ -52,8 +52,6 @@ public class SwaggerPlugin extends PluginAdapter {
      */
     @Override
     public boolean modelFieldGenerated(Field field, TopLevelClass topLevelClass, IntrospectedColumn introspectedColumn, IntrospectedTable introspectedTable, ModelClassType modelClassType) {
-        // 生成注释
-        fieldAnnotation(field, introspectedColumn.getRemarks());
         // 追加ApiModelProperty注解
         topLevelClass.addImportedType(new FullyQualifiedJavaType(Annotation.ApiModelProperty.getClazz()));
         field.addAnnotation(Annotation.ApiModelProperty.getAnnotation() + "(value=\"" + introspectedColumn.getRemarks() + "\",name=\"" + introspectedColumn.getJavaProperty() + "\")");
@@ -76,20 +74,4 @@ public class SwaggerPlugin extends PluginAdapter {
     }
 
 
-    /**
-     * 属性注释生成
-     *
-     * @param field
-     * @param explain
-     */
-    public static void fieldAnnotation(Field field, String explain) {
-        // 生成注释
-        StringBuilder sb = new StringBuilder();
-        field.addJavaDocLine("/**");
-        sb.append(" * ");
-        sb.append(explain);
-        field.addJavaDocLine(sb.toString());
-        field.addJavaDocLine(" */");
-        // 生成注释结束
-    }
 }
