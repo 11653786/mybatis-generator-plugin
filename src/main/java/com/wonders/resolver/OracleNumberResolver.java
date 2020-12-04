@@ -114,7 +114,7 @@ public class OracleNumberResolver implements JavaTypeResolver {
             } else if (column.getLength() > 4) {
                 answer = new FullyQualifiedJavaType(Integer.class.getName());
             } else {
-                answer = new FullyQualifiedJavaType(Short.class.getName());
+                answer = new FullyQualifiedJavaType(Long.class.getName());
             }
         } else {
             answer = defaultType;
